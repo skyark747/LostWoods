@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private FixedJoystick js;
 
-    public float speed = 2f;
+    public float speed = 3f;
 
     private void FixedUpdate()
     {
@@ -18,6 +18,5 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.LookRotation(rb.velocity);
         }
-        
     }
 }
