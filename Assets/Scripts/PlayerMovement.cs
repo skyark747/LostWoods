@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody),typeof(BoxCollider))]
+
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
@@ -17,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
         if (js.Horizontal != 0 || js.Vertical != 0)
         {
             transform.rotation = Quaternion.LookRotation(rb.velocity);
+            animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            animator.SetBool("IsWalking", false);
         }
     }
 }
