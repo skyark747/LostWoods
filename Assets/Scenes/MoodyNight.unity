@@ -203,6 +203,24 @@ MonoBehaviour:
   rb: {fileID: 187478132}
   animator: {fileID: 187478140}
   js: {fileID: 2039449540}
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.49454054
+      outSlope: 0.49454054
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   speed: 3
 --- !u!1 &195092263
 GameObject:
