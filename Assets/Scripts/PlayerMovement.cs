@@ -24,6 +24,11 @@ public class PlayerMovement : MonoBehaviour
         if(dir!=Vector3.zero )
         {
             transform.LookAt(transform.position+dir);
+            animator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            animator.SetBool("IsRunning", false);
         }
         
        
