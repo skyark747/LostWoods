@@ -17,6 +17,6 @@ public class PlayerHealthbar : MonoBehaviour
     }
     void Health()
     {
-        img.fillAmount = chealth/20;
+        img.fillAmount = chealth/1.5f;
     }
 }
