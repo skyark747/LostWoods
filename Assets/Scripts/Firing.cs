@@ -12,9 +12,14 @@ public class Firing : MonoBehaviour
         
     }
 
-    public void Fire()
+    public void PointerDown()
     {
         m_Animator.SetBool("IsFiring", true);
+    }
+
+    public void PointerUp()
+    {
+        m_Animator.SetBool("IsFiring", false);
     }
 
     // Update is called once per frame
