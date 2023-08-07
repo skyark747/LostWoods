@@ -10,12 +10,6 @@ public class Firing : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
 
-
-    void Start()
-    {
-        
-    }
-
     public void PointerDown()
     {
         m_Animator.SetBool("IsFiring", true);
@@ -28,9 +22,4 @@ public class Firing : MonoBehaviour
         m_Animator.SetBool("IsFiring", false);
     }
 
-
-    void Update()
-    {
-        
-    }
 }
