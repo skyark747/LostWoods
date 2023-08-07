@@ -6,7 +6,11 @@ using UnityEngine.UI;
 public class Firing : MonoBehaviour
 {
     public Animator m_Animator;
-    // Start is called before the first frame update
+    public Transform bulletSpawnPoint;
+    public GameObject bulletPrefab;
+    public float bulletSpeed = 10;
+
+
     void Start()
     {
         
@@ -15,6 +19,8 @@ public class Firing : MonoBehaviour
     public void PointerDown()
     {
         m_Animator.SetBool("IsFiring", true);
+        var bullet=Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
     }
 
     public void PointerUp()
@@ -22,7 +28,7 @@ public class Firing : MonoBehaviour
         m_Animator.SetBool("IsFiring", false);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         
