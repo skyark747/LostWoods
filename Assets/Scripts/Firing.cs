@@ -15,6 +15,7 @@ public class Firing : MonoBehaviour
         m_Animator.SetBool("IsFiring", true);
         var bullet=Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+     
     }
 
     public void PointerUp()
