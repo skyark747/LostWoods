@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
+    [SerializeField] Animator animator;
     void Start()
     {
         
@@ -12,6 +13,6 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
-        
+        animator.SetBool("WalkForward", true);
     }
 }
