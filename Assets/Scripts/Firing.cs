@@ -7,14 +7,9 @@ public class Firing : MonoBehaviour
 {
     public Animator m_Animator;
     public Transform bulletSpawnPoint;
+    public Transform bulletSpawnPoint2;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
-
-
-    void Start()
-    {
-        
-    }
 
     public void PointerDown()
     {
@@ -29,9 +24,4 @@ public class Firing : MonoBehaviour
         m_Animator.SetBool("IsFiring", false);
     }
 
-
-    void Update()
-    {
-        
-    }
 }

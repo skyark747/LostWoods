@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject MyEnemy;
+    public Transform AttackPos;
     public int EnemyCount;
     public int MaxEnemy;
     public int xPos;
@@ -16,14 +18,17 @@ public class EnemySpawner : MonoBehaviour
 
    IEnumerator SpawnEnemy()
    {
-        while(EnemyCount<=0) 
+        while(EnemyCount<=MaxEnemy) 
         {
 
             xPos = Random.Range(54, 54);
             zPos = Random.Range(29, 43);
             Instantiate(MyEnemy, new Vector3(xPos, 2.372385f, zPos), Quaternion.identity);
+            MyEnemy.GetComponent<Transform>().LookAt(AttackPos);
             yield return new WaitForSeconds(1);
             EnemyCount++;
         }
    }
 }
+
+/*Quaternion.identity*/
