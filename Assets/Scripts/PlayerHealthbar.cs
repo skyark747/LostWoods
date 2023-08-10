@@ -8,15 +8,15 @@ public class PlayerHealthbar : MonoBehaviour
     [SerializeField] Image img;
     [SerializeField] float chealth=1000;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(other.gameObject.CompareTag("enemy"))
+        if(collision.gameObject.CompareTag("Enemy"))
         {
             Health();
         }
     }
     void Health()
     {
-        img.fillAmount = chealth/1.5f;
+        img.fillAmount = 0;
     }
 }

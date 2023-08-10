@@ -176,6 +176,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+  BulletPerfab: {fileID: 6804990658058999119}
+  dushman: {fileID: 7962199819078159310, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+  _s: 3
 --- !u!96 &-7938464592562237791
 TrailRenderer:
   serializedVersion: 3
