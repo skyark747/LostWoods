@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    [SerializeField] Animator animator;
+    //[SerializeField] Animator animator;
     public Transform GoalPoint;
+    public float speed = 2f;
     void Start()
     {
         
@@ -14,6 +15,7 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
+       
         transform.LookAt(GoalPoint);
         //animator.SetBool("IsRunning", true);
     }

@@ -7,7 +7,6 @@ public class Firing : MonoBehaviour
 {
     public Animator m_Animator;
     public Transform bulletSpawnPoint;
-    public Transform bulletSpawnPoint2;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
 
