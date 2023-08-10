@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealthbar : MonoBehaviour
 {
     public Image Himg;
+    public Animator MyAnim;
     private bool IsHurt = false;
     float health=1f;
 
@@ -16,6 +17,10 @@ public class PlayerHealthbar : MonoBehaviour
             health -= .1f;
         }
         Himg.fillAmount = health;
+        if(health==0f)
+        {
+            MyAnim.SetBool("IsDead", true);
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
