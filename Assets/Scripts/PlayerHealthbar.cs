@@ -6,18 +6,27 @@ using UnityEngine.UI;
 public class PlayerHealthbar : MonoBehaviour
 {
     public Image Himg;
+    private bool IsHurt = false;
     float health=1f;
 
-    void Update()
+    void FixedUpdate()
     {
-        Himg.fillAmount = health;   
+        if (IsHurt)
+        {
+            health -= .1f;
+        }
+        Himg.fillAmount = health;
     }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            health -= 0.1f;
+            IsHurt = true;
         }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        IsHurt = false;
     }
 
 }
