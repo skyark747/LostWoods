@@ -5,18 +5,19 @@ using UnityEngine.UI;
 
 public class PlayerHealthbar : MonoBehaviour
 {
-    [SerializeField] Image img;
-    [SerializeField] float chealth=1000;
+    public Image Himg;
+    float health=1f;
 
+    void Update()
+    {
+        Himg.fillAmount = health;   
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Health();
+            health -= 0.1f;
         }
     }
-    void Health()
-    {
-        img.fillAmount = 0;
-    }
+
 }
