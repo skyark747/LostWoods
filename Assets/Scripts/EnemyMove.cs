@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    public Transform GoalPoint;
     void Start()
     {
         
@@ -13,6 +14,7 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
-        animator.SetBool("WalkForward", true);
+        transform.LookAt(GoalPoint);
+        //animator.SetBool("IsRunning", true);
     }
 }
