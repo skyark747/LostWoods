@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 2.5f;
     private void FixedUpdate()
     {
-        movement(); aud.Play();
+        movement();
     }
     private void movement()
     {
