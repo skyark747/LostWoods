@@ -34,11 +34,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsRunning", false);
 
         }
-        if(js.Horizontal!=0||js.Vertical!=0)
-        {
-            aud.Play();
-        }
-        
+      
        
     }
   
