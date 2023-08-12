@@ -27,16 +27,15 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.LookAt(transform.position + dir);
             animator.SetBool("IsRunning", true);
-            aud.Play();
+            aud.enabled = true;
 
         }
         else
         {
             animator.SetBool("IsRunning", false);
-
+            aud.enabled=false;
         }
       
-       
     }
   
 }
