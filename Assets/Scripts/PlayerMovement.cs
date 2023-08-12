@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.LookAt(transform.position + dir);
             animator.SetBool("IsRunning", true);
+            aud.Play();
 
         }
         else
