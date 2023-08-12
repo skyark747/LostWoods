@@ -7,13 +7,19 @@ public class DialogueStarter : MonoBehaviour
     public Messages[] msgs;
     public Actor[] actor;
 
-    public void Start()
+    public AudioSource audioSource;
+    public void Startsound()
     {
+        audioSource.Stop();
         FindAnyObjectByType<Conversation>().OpenDialogue(msgs, actor);
     }
-    public void Next()
+    public void Update()
     {
-        FindAnyObjectByType<Conversation>().NextMessage();
+        if (Input.GetKey(KeyCode.Space))
+        {
+            FindAnyObjectByType<Conversation>().NextMessage();
+        }
+  
     }
 }
 [System.Serializable]
