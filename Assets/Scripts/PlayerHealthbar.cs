@@ -14,7 +14,7 @@ public class PlayerHealthbar : MonoBehaviour
     {
         if (IsHurt)
         {
-            health -= .08f;
+            health -= .001f;
         }
         Himg.fillAmount = health;
         if(health<=0f)
