@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsRunning", false);
             aud.enabled=false;
         }
-      
+        
     }
   
 }

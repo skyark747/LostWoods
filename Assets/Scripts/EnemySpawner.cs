@@ -22,7 +22,11 @@ public class EnemySpawner : MonoBehaviour
         {
 
             xPos = Random.Range(54, 54);
-            zPos = Random.Range(29, 43);
+            zPos = Random.Range(30, 40);
+            Instantiate(MyEnemy, new Vector3(xPos, 0, zPos), Quaternion.identity);
+            MyEnemy.GetComponent<Transform>().LookAt(AttackPos);
+            xPos = Random.Range(16, 16);
+            zPos = Random.Range(30, 40);
             Instantiate(MyEnemy, new Vector3(xPos, 0, zPos), Quaternion.identity);
             MyEnemy.GetComponent<Transform>().LookAt(AttackPos);
             yield return new WaitForSeconds(1);

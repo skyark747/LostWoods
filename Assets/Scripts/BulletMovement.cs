@@ -14,13 +14,16 @@ public class BulletMovement : MonoBehaviour
         Destroy(gameObject, life);
     }
 
+    private void Update()
+    {
+    //    transform.LookAt(dushman.transform);
+    //    BulletPerfab.GetComponent<Rigidbody>().velocity = BulletPerfab.transform.forward * _s;
+    }
     private void OnCollisionEnter(Collision collision)
     {
-        transform.LookAt(dushman.transform);
-        BulletPerfab.GetComponent<Rigidbody>().velocity = BulletPerfab.transform.forward * _s;
 
-        if (collision.gameObject.CompareTag("Enemy"))
-            Destroy(collision.gameObject);
+        //if (collision.gameObject.CompareTag("Enemy"))
+        //    Destroy(collision.gameObject);
         Destroy(gameObject);  
     }
 }

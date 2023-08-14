@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 45ACP Bullet_Head
       objectReference: {fileID: 0}
+    - target: {fileID: 3625037896966406280, guid: 9e0ef2cf9cfc11c46bbe7f28b272f6fb, type: 3}
+      propertyPath: m_TagString
+      value: Bullet
+      objectReference: {fileID: 0}
     - target: {fileID: 8535412081993147290, guid: 9e0ef2cf9cfc11c46bbe7f28b272f6fb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -177,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   BulletPerfab: {fileID: 6804990658058999119}
-  dushman: {fileID: 7962199819078159310, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
+  dushman: {fileID: 2883237726456585095, guid: 6f91e641a8e7b3a498dc70c1ddbfca98, type: 3}
   _s: 3
 --- !u!96 &-7938464592562237791
 TrailRenderer:

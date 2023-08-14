@@ -8,6 +8,7 @@ public class EnemyMove : MonoBehaviour
     public GameObject Bear;
     public Transform GoalPoint;
     public float speed = 2f;
+    private bool IsDead=false;
     void Start()
     {
         
@@ -16,17 +17,23 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
-       
-        transform.LookAt(GoalPoint);
-        Bear.GetComponent<Rigidbody>().velocity = Bear.transform.forward * speed;
+        if (!IsDead)
+        {
+            transform.LookAt(GoalPoint);
+            //Bear.GetComponent<Rigidbody>().velocity = Bear.transform.forward * speed;
+        }
         //animator.SetBool("IsRunning", true);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("Player") && !IsDead)
         {
             animator.SetBool("Attack", true);
+        }
+        else if(collision.gameObject.CompareTag("Bullet"))
+        {
+            animator.SetBool("Dead", true);
         }
     }
     private void OnCollisionExit(Collision collision)
