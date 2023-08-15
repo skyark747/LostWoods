@@ -810,7 +810,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.0025024, y: -0.0024948}
-  m_SizeDelta: {x: 1024.5, y: 527.51}
+  m_SizeDelta: {x: 1024.5, y: 527.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!328 &1377831569
 VideoPlayer:
