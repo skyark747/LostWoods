@@ -289,7 +289,6 @@ RectTransform:
   m_LocalScale: {x: 9.275545, y: 1.8786865, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2018113735}
   - {fileID: 1932354285}
   - {fileID: 1257613244}
   m_Father: {fileID: 1249986518}
@@ -313,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -449,6 +448,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1797546034}
+  - {fileID: 2018113735}
   - {fileID: 951488459}
   - {fileID: 1847857713}
   m_Father: {fileID: 0}
@@ -939,9 +939,9 @@ MonoBehaviour:
     msg: Deadly creatures??!! Wait....What do you mean..??
   actor:
   - name: 'John:'
-    pic: {fileID: 21300000, guid: dd4f989a576a6474d99523a0f2dddc09, type: 3}
+    pic: {fileID: 21300000, guid: 93671b2291e8afd41a98b8951b3de93e, type: 3}
   - name: 'Clara:'
-    pic: {fileID: 21300000, guid: 08e46630a905ffb44b404010ffe313ae, type: 3}
+    pic: {fileID: 21300000, guid: 356a4c76576b05241a690a068cbc322c, type: 3}
 --- !u!114 &1847857715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,15 +1266,15 @@ RectTransform:
   m_GameObject: {fileID: 2018113734}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.14552245, y: 0.7180016, z: 1}
+  m_LocalScale: {x: 2.343376, y: 3.0489137, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 951488459}
+  m_Father: {fileID: 1249986518}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38.380493, y: 1.0645752}
+  m_AnchoredPosition: {x: -389, y: -122}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2018113736
@@ -1297,7 +1297,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1

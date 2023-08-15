@@ -50,26 +50,5 @@ public class Conversation : MonoBehaviour
         }
     }
     
-    //int index;
-
-    //private void Start()
-    //{
-    //    textline.text=string.Empty;
-    //    Name.text=string.Empty;
-    //    StartDialogue();
-    //}
-    //void StartDialogue()
-    //{
-    //    index = 0;
-    //    StartCoroutine(TypeLine());
-    //}
-
-    //IEnumerator TypeLine()
-    //{
-    //    foreach(char c in lines[index].ToCharArray())
-    //    {
-    //        textline.text += c;
-    //        yield return new WaitForSeconds(textspeed);
-    //    }
-    //}
+    
 }

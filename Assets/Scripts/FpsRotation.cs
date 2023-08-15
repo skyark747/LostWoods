@@ -21,7 +21,6 @@ public class FpsRotation : MonoBehaviour
             Vector3 deltaMousePos = currentMousePosition - lastMousePosition;
             float rotationAmount = deltaMousePos.x * rotationSpeed;
 
-            // Rotate the player around the up axis
             transform.Rotate(Vector3.up, rotationAmount, Space.World);
 
             lastMousePosition = currentMousePosition;
