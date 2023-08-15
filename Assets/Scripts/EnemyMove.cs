@@ -8,6 +8,7 @@ public class EnemyMove : MonoBehaviour
     public GameObject Bear;
     public Transform GoalPoint;
     public float speed = 2f;
+    public AudioSource aud;
     private bool IsDead=false;
     void Start()
     {
@@ -30,12 +31,13 @@ public class EnemyMove : MonoBehaviour
         if(collision.gameObject.CompareTag("Player") && !IsDead)
         {
             animator.SetBool("Attack", true);
+            aud.Play();
         }
-        else if(collision.gameObject.CompareTag("Bullet"))
+        else if(collision.gameObject.CompareTag("Bullet") && !IsDead)
         {
             animator.SetBool("Dead", true);
         }
-        else if(collision.gameObject.CompareTag("House"))
+        else if(collision.gameObject.CompareTag("House") && !IsDead)
         {
             animator.SetBool("Attack", true);
         }

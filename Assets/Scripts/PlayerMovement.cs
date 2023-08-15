@@ -8,13 +8,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Animator animator;
     [SerializeField] private FixedJoystick js;
+    public PlayerHealthbar script;
     bool move=false;
     public AudioSource aud;
     float Hmove, Vmove;
     public float speed = 2.5f;
     private void FixedUpdate()
     {
-        movement();     
+        if (script.health > 0)
+        {
+            movement();
+        }
     }
     private void movement()
     {
