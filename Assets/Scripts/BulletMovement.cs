@@ -16,7 +16,7 @@ public class BulletMovement : MonoBehaviour
 
     private void Update()
     {
-    //    transform.LookAt(dushman.transform);
+       //transform.LookAt(dushman.transform);
     //    BulletPerfab.GetComponent<Rigidbody>().velocity = BulletPerfab.transform.forward * _s;
     }
     private void OnCollisionEnter(Collision collision)
