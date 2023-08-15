@@ -10,14 +10,19 @@ public class Firing : MonoBehaviour
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
+    public PlayerHealthbar script;
 
     public void PointerDown()
     {
+            fire();
+    }
+
+    private void fire()
+    {
         m_Animator.SetBool("IsFiring", true);
-        var bullet=Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
         aud.Play();
-     
     }
 
     public void PointerUp()
