@@ -487,7 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Himg: {fileID: 763486438}
   MyAnim: {fileID: 187478140}
-  health: 0.1
+  health: 1
 --- !u!82 &187478144
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3045,7 +3045,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 821b6440d8e269c40b5a0eb8a44a079d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4813,6 +4813,10 @@ PrefabInstance:
     - target: {fileID: 100290, guid: acfbf07580928104588307b3bca716d8, type: 3}
       propertyPath: m_Name
       value: Izzy
+      objectReference: {fileID: 0}
+    - target: {fileID: 100290, guid: acfbf07580928104588307b3bca716d8, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400290, guid: acfbf07580928104588307b3bca716d8, type: 3}
       propertyPath: m_RootOrder
