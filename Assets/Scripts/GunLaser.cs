@@ -16,7 +16,7 @@ public class GunLaser : MonoBehaviour
     {
         lr.SetPosition(0,transform.position);
         RaycastHit hit;
-        if(Physics.Raycast(transform.position,transform.forward,out hit,10))
+        if(Physics.Raycast(transform.position,transform.forward,out hit,0.5f))
         {
             if(hit.collider)
             {
