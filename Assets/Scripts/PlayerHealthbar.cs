@@ -10,9 +10,10 @@ public class PlayerHealthbar : MonoBehaviour
     protected bool IsHurt = false;
     protected bool IsDEad = false;
     public float health=1f;
-
+  
     void FixedUpdate()
     {
+        
         if (IsHurt)
         {
             health -= .001f;
@@ -28,7 +29,7 @@ public class PlayerHealthbar : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            IsHurt = true;
+            IsHurt = true;         
         }
     }
     private void OnCollisionExit(Collision collision)
