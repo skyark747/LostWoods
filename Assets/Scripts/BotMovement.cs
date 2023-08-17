@@ -6,28 +6,31 @@ using UnityEngine.AI;
 public class BotMovement : MonoBehaviour
 {
     public Animator m_Animator;
-    public GameObject Enemy;
     //public AudioSource aud;
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
+    public bool isCollided = false;
 
 
     //Attack
     public float TimeBetweenAttacks=1f;
     bool AlreadyAttacked=false;
 
-    //private void OnCollisionEnter(Collision collision)  
-    //{
-    //    if (collision.gameObject.CompareTag("Enemy"))
-    //    {
-    //        transform.LookAt(collision.gameObject.transform);
-    //        Attack();
-    //    }
-    //}
-    private void FixedUpdate()
+    private void OnTriggerEnter(Collider other)
     {
-        Attack();
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            isCollided=true;
+            transform.LookAt(other.gameObject.transform);
+            Attack();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        isCollided = false;
+        m_Animator.SetBool("IsFiring", false);
     }
     private void Attack()
     {
