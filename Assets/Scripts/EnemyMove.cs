@@ -37,10 +37,7 @@ public class EnemyMove : MonoBehaviour
         {
             animator.SetBool("Attack", true);
         }
-        else if(collision.gameObject.CompareTag("BotCircle"))
-        {
-            FindAnyObjectByType<BotMovement>().DoAttack();
-        }
+       
     }
     private void OnCollisionExit(Collision collision)
     {

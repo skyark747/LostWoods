@@ -1105,7 +1105,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 1967074769}
   bulletPrefab: {fileID: 6804990658058999119, guid: 65c9f6563c561ee4e8905d1e6a32548b, type: 3}
   bulletSpeed: 10
-  TimeBetweenAttacks: 0
+  TimeBetweenAttacks: 1
 --- !u!1 &229622837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,35 +1312,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.06
+      value: -0.071
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.004
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.01
+      value: -0.014
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.6412002
+      value: -0.5600201
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.26079056
+      value: 0.40684995
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6685208
+      value: 0.5838816
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.27190188
+      value: 0.424185
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -44.265
+      value: -71.996
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 3d87184bf4725b841b26693d2234fffd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y

@@ -14,21 +14,17 @@ public class BotMovement : MonoBehaviour
 
 
     //Attack
-    public float TimeBetweenAttacks;
-    bool AlreadyAttacked;
+    public float TimeBetweenAttacks=5f;
+    bool AlreadyAttacked=false;
 
-    public void DoAttack()
+    public void FixedUpdate()
     {
-       
          transform.LookAt(Enemy.transform);
-         Attack();
-        
+         Attack();        
     }
     private void Attack()
     {
         //Make sure Enemy dosen't move
-       
-        
 
         if (!AlreadyAttacked)
         {
