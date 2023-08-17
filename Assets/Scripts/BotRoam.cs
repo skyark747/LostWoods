@@ -50,13 +50,14 @@ public class BotRoam : MonoBehaviour
             else if (isDelaying)
             {
                 delayTimer += Time.deltaTime;
-
+                anim.SetBool("IsRunning", false);
                 if (delayTimer >= delayTime)
                 {
                     isDelaying = false;
                     isMoving = true;
                     transform.Rotate(transform.rotation.x, transform.rotation.y+180,transform.rotation.z);
                 }
+                
             }
         }
     }

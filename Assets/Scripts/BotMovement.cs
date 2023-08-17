@@ -22,6 +22,7 @@ public class BotMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             isCollided=true;
+           
             transform.LookAt(other.gameObject.transform);
             Attack();
         }
@@ -39,6 +40,7 @@ public class BotMovement : MonoBehaviour
         if (!AlreadyAttacked)
         {
             ///Add Attack code
+           
             m_Animator.SetBool("IsFiring", true);
             var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;

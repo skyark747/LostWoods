@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    public GameObject Bear;
+    public GameObject Zombie;
     public Transform GoalPoint;
     public float speed = 2f;
     public AudioSource aud;
@@ -31,7 +31,7 @@ public class EnemyMove : MonoBehaviour
         else if(collision.gameObject.CompareTag("Bullet") && !IsDead)
         {
             animator.SetBool("Dead", true);
-            Destroy(gameObject);
+            Destroy(Zombie);
             this.IsDead = true;
             
         }
