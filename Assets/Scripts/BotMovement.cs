@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class BotMovement : MonoBehaviour
 {
     public Animator m_Animator;
+    public GameObject Enemy;
     //public AudioSource aud;
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
@@ -16,13 +17,12 @@ public class BotMovement : MonoBehaviour
     public float TimeBetweenAttacks;
     bool AlreadyAttacked;
 
-    private void OnCollisionEnter(Collision collision)
+    public void DoAttack()
     {
-        if(collision.gameObject.CompareTag("Enemy"))
-        {
-            transform.LookAt(collision.gameObject.transform);
-            Attack();
-        }
+       
+         transform.LookAt(Enemy.transform);
+         Attack();
+        
     }
     private void Attack()
     {

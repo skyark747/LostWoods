@@ -10,12 +10,7 @@ public class EnemyMove : MonoBehaviour
     public float speed = 2f;
     public AudioSource aud;
     private bool IsDead=false;
-    void Start()
-    {
-        
-    }
-
-
+  
     void Update()
     {
         if (!IsDead)
@@ -41,6 +36,10 @@ public class EnemyMove : MonoBehaviour
         else if(collision.gameObject.CompareTag("House") && !IsDead)
         {
             animator.SetBool("Attack", true);
+        }
+        else if(collision.gameObject.CompareTag("BotCircle"))
+        {
+            FindAnyObjectByType<BotMovement>().DoAttack();
         }
     }
     private void OnCollisionExit(Collision collision)
