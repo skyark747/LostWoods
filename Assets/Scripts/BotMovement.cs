@@ -5,17 +5,15 @@ using UnityEngine.AI;
 
 public class BotMovement : MonoBehaviour
 {
-    public NavMeshAgent agent;
+    public GameObject agent;
+    private GameObject enemy;
+    public LayerMask WhatIsGround, WhatIsEnemy;
+    public Animator m_Animator;
+    //public AudioSource aud;
+    public Transform bulletSpawnPoint;
+    public GameObject bulletPrefab;
+    public float bulletSpeed = 10;
 
-    public Transform player;
-
-    public LayerMask WhatIsGround, WhatIsPlayer;
-
-
-    //Patroling
-    public Vector3 WalkPoint;
-    public bool WalkPointSet;
-    public float WalkPointRange;
 
     //Attack
     public float TimeBetweenAttacks;
@@ -26,68 +24,36 @@ public class BotMovement : MonoBehaviour
     public float SightRange, AttackRange;
     public bool PlayerInSightRange, PlayerInAttackRange;
 
-    private void Awake()
-    {
-        player = GameObject.Find("Enemy").transform;
-        agent=GetComponent<NavMeshAgent>();
-    }
-
     private void Update()
     {
-        PlayerInSightRange = Physics.CheckSphere(transform.position, SightRange, WhatIsPlayer);
-        PlayerInAttackRange = Physics.CheckSphere(transform.position, AttackRange, WhatIsPlayer);
+        PlayerInSightRange = Physics.CheckSphere(transform.position, SightRange, WhatIsEnemy);
+        PlayerInAttackRange = Physics.CheckSphere(transform.position, AttackRange, WhatIsEnemy);
 
-        if (!PlayerInSightRange && !PlayerInAttackRange) Patrolling();
-        if (PlayerInSightRange && !PlayerInAttackRange) ChasePlayer();
-        if (PlayerInSightRange && PlayerInAttackRange) Attack();
-    }
-
-    private void Patrolling()
-    {
-        if (!WalkPointSet) SearchWalkPoint();
-
-        if(WalkPointSet)
+        if (PlayerInSightRange && PlayerInAttackRange) 
         {
-            agent.SetDestination(WalkPoint);
-        }
-
-        Vector3 distanceToWalkPoint = transform.position - WalkPoint;
-
-        //WalkPoint Reached
-        if(distanceToWalkPoint.magnitude<1f)
-        {
-            WalkPointSet = false;
+            enemy = GameObject.FindGameObjectWithTag("Enemy");
+            agent.transform.LookAt(enemy.transform); 
+            Attack(); 
         }
     }
 
-    private void SearchWalkPoint()
-    {
-        float randomZ = Random.Range(-WalkPointRange, WalkPointRange);
-        float randomX = Random.Range(-WalkPointRange, WalkPointRange);
-
-        WalkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
-
-        if(Physics.Raycast(WalkPoint,-transform.up,2f,WhatIsGround))
-        {
-            WalkPointSet = true;
-        }
-    }
     private void ChasePlayer()
     {
-        agent.SetDestination(player.position);
+        if(gameObject.CompareTag("Enemy"))
+            transform.LookAt(gameObject.transform);
     }
     private void Attack()
     {
         //Make sure Enemy dosen't move
-        agent.SetDestination(transform.position);
+       
+        
 
-        transform.LookAt(player);
-
-        if(!AlreadyAttacked)
+        if (!AlreadyAttacked)
         {
             ///Add Attack code
-            
-
+            m_Animator.SetBool("IsFiring", true);
+            var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
             ////
 
             AlreadyAttacked = true;

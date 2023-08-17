@@ -36,6 +36,7 @@ public class EnemyMove : MonoBehaviour
         else if(collision.gameObject.CompareTag("Bullet") && !IsDead)
         {
             animator.SetBool("Dead", true);
+            Destroy(collision.gameObject);
         }
         else if(collision.gameObject.CompareTag("House") && !IsDead)
         {
