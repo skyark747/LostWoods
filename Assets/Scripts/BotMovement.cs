@@ -5,9 +5,6 @@ using UnityEngine.AI;
 
 public class BotMovement : MonoBehaviour
 {
-    public GameObject agent;
-    private GameObject enemy;
-    public LayerMask WhatIsGround, WhatIsEnemy;
     public Animator m_Animator;
     //public AudioSource aud;
     public Transform bulletSpawnPoint;
@@ -19,28 +16,13 @@ public class BotMovement : MonoBehaviour
     public float TimeBetweenAttacks;
     bool AlreadyAttacked;
 
-
-    //States
-    public float SightRange, AttackRange;
-    public bool PlayerInSightRange, PlayerInAttackRange;
-
-    private void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        PlayerInSightRange = Physics.CheckSphere(transform.position, SightRange, WhatIsEnemy);
-        PlayerInAttackRange = Physics.CheckSphere(transform.position, AttackRange, WhatIsEnemy);
-
-        if (PlayerInSightRange && PlayerInAttackRange) 
+        if(collision.gameObject.CompareTag("Enemy"))
         {
-            enemy = GameObject.FindGameObjectWithTag("Enemy");
-            agent.transform.LookAt(enemy.transform); 
-            Attack(); 
+            transform.LookAt(collision.gameObject.transform);
+            Attack();
         }
-    }
-
-    private void ChasePlayer()
-    {
-        if(gameObject.CompareTag("Enemy"))
-            transform.LookAt(gameObject.transform);
     }
     private void Attack()
     {
