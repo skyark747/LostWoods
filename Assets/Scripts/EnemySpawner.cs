@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
             zPos = Random.Range(52, 52);
             Instantiate(MyEnemy, new Vector3(xPos, 0, zPos), Quaternion.identity);
             MyEnemy.GetComponent<Transform>().LookAt(AttackPos);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
             EnemyCount++;
         }
    }
