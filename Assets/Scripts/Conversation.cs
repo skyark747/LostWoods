@@ -48,6 +48,7 @@ public class Conversation : MonoBehaviour
         else
         {
             isactive = false;
+            SceneManager.LoadScene("MoodyNight");
         }
         
     }
