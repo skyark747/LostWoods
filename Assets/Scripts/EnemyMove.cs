@@ -32,8 +32,7 @@ public class EnemyMove : MonoBehaviour
         {
             animator.SetBool("Dead", true);
             Destroy(Zombie);
-            this.IsDead = true;
-            
+            this.IsDead = true;    
         }
         else if(collision.gameObject.CompareTag("House") && !IsDead)
         {

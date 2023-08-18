@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Conversation : MonoBehaviour
@@ -48,6 +49,7 @@ public class Conversation : MonoBehaviour
         {
             isactive = false;
         }
+        
     }
     
     
