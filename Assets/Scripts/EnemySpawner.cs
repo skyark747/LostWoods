@@ -19,7 +19,8 @@ public class EnemySpawner : MonoBehaviour
 
    IEnumerator SpawnEnemy()
    {
-        while(EnemyCount < MaxEnemy) 
+        new WaitForSeconds(10);
+        while (EnemyCount < MaxEnemy) 
         {
 
             xPos = Random.Range(54, 54);

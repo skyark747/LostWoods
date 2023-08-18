@@ -11,6 +11,7 @@ public class Conversation : MonoBehaviour
     public TextMeshProUGUI textline;
     public TextMeshProUGUI Name;
     public RectTransform back;
+    public AudioSource audioSource;
     public Image img;
 
     Messages[] c_msg;
@@ -44,6 +45,10 @@ public class Conversation : MonoBehaviour
         if(activemsg < c_msg.Length)
         {
             DisplayMsg();
+            if (activemsg == c_msg.Length - 1)
+            {
+                    audioSource.enabled = true;
+            }
         }
         else
         {

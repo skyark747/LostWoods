@@ -41,5 +41,23 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
-  
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("House"))
+        {
+            animator.SetBool("IsRunning", false);
+        }
+    }
+
+    //private void OnCollisionExit(Collision collision)
+    //{
+    //    if (dir != Vector3.zero)
+    //    {
+    //        transform.LookAt(transform.position + dir);
+    //        animator.SetBool("IsRunning", true);
+    //        aud.enabled = true;
+
+    //    }
+    //}
 }

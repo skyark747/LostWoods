@@ -10,11 +10,13 @@ public class QuitWindow : MonoBehaviour
     public void click()
     {
         panel.SetActive(true);
+        AudioListener.volume = 0;
         Time.timeScale = 0f;
     }
     public void Resume()
     {
         panel.SetActive(false);
+        AudioListener.volume = 1.0f;
         Time.timeScale = 1f;
     }
 
@@ -26,6 +28,7 @@ public class QuitWindow : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        AudioListener.volume = 1.0f;
     }
 
 }
