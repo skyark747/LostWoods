@@ -38,7 +38,11 @@ public class EnemyMove : MonoBehaviour
         {
             animator.SetBool("Attack", true);
         }
-       
+        else if (collision.gameObject.CompareTag("Border") && !IsDead)
+        {
+            animator.SetBool("Dead", true);
+        }
+
     }
     private void OnCollisionExit(Collision collision)
     {
