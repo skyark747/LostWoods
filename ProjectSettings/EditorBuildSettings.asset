@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartMovie.unity
+    guid: 763bb93c3be012c4a86b9f766ba43c97
+  - enabled: 1
     path: Assets/Scenes/Dialogues.unity
     guid: 7faeadf40e5a98649ae45348e084fabc
   - enabled: 1
     path: Assets/Scenes/MoodyNight.unity
     guid: 6c5afed758d9dde4d96232ce7a139e63
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: e18be1f64519561458e505bf08e0e34e
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 4f0f9def0ec31d04c9782bd8812b5e22
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 8a673f976fa2e984da4f824e13913e1f
   m_configObjects: {}
