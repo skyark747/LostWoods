@@ -911,10 +911,11 @@ MonoBehaviour:
   rb: {fileID: 187478132}
   animator: {fileID: 187478140}
   js: {fileID: 2039449540}
+  killcount: 0
+  scenechange: 10
   script: {fileID: 187478143}
   aud: {fileID: 187478144}
   speed: 3
-  killCount: 0
   sceneName: 
 --- !u!114 &187478142
 MonoBehaviour:
@@ -1481,6 +1482,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &196749326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196749311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6507e729cb7f5478ec2f3b47d19849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Himg: {fileID: 813590174}
+  MyAnim: {fileID: 196749321}
+  health: 1
 --- !u!1 &229622837
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,7 +3947,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.498
+      value: 0.241
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -10877,6 +10893,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100290, guid: acfbf07580928104588307b3bca716d8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 196749325}
+    - targetCorrespondingSourceObject: {fileID: 100290, guid: acfbf07580928104588307b3bca716d8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 196749326}
   m_SourcePrefab: {fileID: 100100000, guid: acfbf07580928104588307b3bca716d8, type: 3}
 --- !u!1 &1323510617
 GameObject:

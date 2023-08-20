@@ -10,7 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Animator animator;
     [SerializeField] private FixedJoystick js;
-    public int killcount = 0;
+    public float killcount = 0;
+    public float scenechange = 10f;
     public PlayerHealthbar script;
    
     bool move=false;
@@ -21,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(killcount>=10)
+        if(killcount>=this.scenechange)
         {
             SceneManager.LoadScene(sceneName);
         }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    [SerializeField] GameObject Gem;
+    public GameObject Gem;
     public GameObject Zombie;
     public Transform GoalPoint;
     public float speed = 2f;
@@ -36,7 +36,7 @@ public class EnemyMove : MonoBehaviour
             //Destroy(Zombie);
             this.IsDead = true;
             Gem.SetActive(true);
-            FindAnyObjectByType<PlayerMovement>().killCount++;
+            FindAnyObjectByType<PlayerMovement>().killcount++;
         }
         else if(collision.gameObject.CompareTag("House") && !IsDead)
         {
