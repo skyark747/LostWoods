@@ -3,23 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Animator animator;
     [SerializeField] private FixedJoystick js;
+    public int killcount = 0;
     public PlayerHealthbar script;
+   
     bool move=false;
     public AudioSource aud;
     float Hmove, Vmove;
     public float speed = 2.5f;
-    public int killCount=0;
     public string sceneName;
 
     private void FixedUpdate()
     {
-        if(killCount>=5)
+        if(killcount>=10)
         {
             SceneManager.LoadScene(sceneName);
         }

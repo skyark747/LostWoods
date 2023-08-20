@@ -14,12 +14,6 @@ public class HouseUpgrade : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        if (IsHurt)
-        {
-            health += 0.005f;
-        }
-        image.fillAmount = health;
         if (health >= 1f)
         {
             button.enabled = true;
@@ -31,13 +25,11 @@ public class HouseUpgrade : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Gem"))
         {
-            IsHurt = true;
+            health += 0.05f;
+            image.fillAmount = health;
         }
     }
-    private void OnCollisionExit(Collision collision)
-    {
-        IsHurt = false;
-    }
+  
 }

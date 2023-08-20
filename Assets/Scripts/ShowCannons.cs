@@ -20,15 +20,14 @@ public class ShowCannons : MonoBehaviour
         }
         else if (level == 1)
         {
-            cannon_1.SetActive(true);
+            
             cannon_2.SetActive(true);
             level++;
             UpgradeImage.fillAmount = 0f;
         }
         else if (level == 2)
         {
-            cannon_1.SetActive(true);
-            cannon_2.SetActive(true);
+           
             cannon_3.SetActive(true);
             level++;
             UpgradeImage.fillAmount = 0f;
