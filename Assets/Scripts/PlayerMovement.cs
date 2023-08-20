@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,8 +14,15 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource aud;
     float Hmove, Vmove;
     public float speed = 2.5f;
+    public int killCount=0;
+    public string sceneName;
+
     private void FixedUpdate()
     {
+        if(killCount>=5)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
         if (script.health > 0)
         {
             movement();

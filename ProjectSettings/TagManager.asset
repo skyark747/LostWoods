@@ -9,6 +9,7 @@ TagManager:
   - House
   - BotCircle
   - Border
+  - Gem
   layers:
   - Default
   - TransparentFX

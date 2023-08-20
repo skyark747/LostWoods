@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    [SerializeField] GameObject Gem;
     public GameObject Zombie;
     public Transform GoalPoint;
     public float speed = 2f;
@@ -31,8 +33,10 @@ public class EnemyMove : MonoBehaviour
         else if(collision.gameObject.CompareTag("Bullet") && !IsDead)
         {
             animator.SetBool("Dead", true);
-            Destroy(Zombie);
-            this.IsDead = true;    
+            //Destroy(Zombie);
+            this.IsDead = true;
+            Gem.SetActive(true);
+            FindAnyObjectByType<PlayerMovement>().killCount++;
         }
         else if(collision.gameObject.CompareTag("House") && !IsDead)
         {
