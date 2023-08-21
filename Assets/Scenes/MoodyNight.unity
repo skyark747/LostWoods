@@ -3454,7 +3454,7 @@ MonoBehaviour:
   Gem: {fileID: 1372191205}
   Zombie: {fileID: 643892162}
   GoalPoint: {fileID: 1329650340}
-  speed: 10
+  speed: 20
   aud: {fileID: 643892167}
 --- !u!95 &643892165 stripped
 Animator:

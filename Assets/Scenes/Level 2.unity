@@ -584,7 +584,7 @@ MonoBehaviour:
   animator: {fileID: 187478140}
   js: {fileID: 2039449540}
   killcount: 0
-  scenechange: 10
+  scenechange: 15
   script: {fileID: 187478143}
   aud: {fileID: 187478144}
   speed: 3
@@ -3881,7 +3881,7 @@ MonoBehaviour:
   AttackPos: {fileID: 1329650340}
   Izzyanim: {fileID: 196749321}
   EnemyCount: 0
-  MaxEnemy: 10
+  MaxEnemy: 15
   xPos: 0
   zPos: 0
 --- !u!4 &752156358

@@ -21,8 +21,7 @@ public class EnemySpawner : MonoBehaviour
    {
         new WaitForSeconds(10);
         while (EnemyCount < MaxEnemy) 
-        {
-
+        {          
             xPos = Random.Range(54, 54);
             zPos = Random.Range(30, 40);
             Instantiate(MyEnemy, new Vector3(xPos, 0, zPos), Quaternion.identity);
@@ -31,7 +30,7 @@ public class EnemySpawner : MonoBehaviour
             zPos = Random.Range(52, 52);
             Instantiate(MyEnemy, new Vector3(xPos, 0, zPos), Quaternion.identity);
             MyEnemy.GetComponent<Transform>().LookAt(AttackPos);
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(3);
             Izzyanim.SetBool("IsRunning", false);
             FindAnyObjectByType<BotRoam>().enabled = false;
             EnemyCount++;
