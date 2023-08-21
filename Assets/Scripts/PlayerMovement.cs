@@ -34,7 +34,8 @@ public class PlayerMovement : MonoBehaviour
                 panel.SetActive(true);
                 button.SetActive(true);
                 sprite.SetActive(true);
-                FindAnyObjectByType<QuitWindow>().click();
+                AudioListener.volume = 0;
+                Time.timeScale = 0f;
             } 
         }
         if (script.health > 0)
