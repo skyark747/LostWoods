@@ -22,15 +22,20 @@ public class PlayerMovement : MonoBehaviour
     public GameObject panel;
     public GameObject button;
     public GameObject sprite;
+    public AudioSource ad;
 
     private void FixedUpdate()
     {
         if(killcount>=this.scenechange)
         {
-            panel.SetActive(true);
-            button.SetActive(true);
-            sprite.SetActive(true);
-            FindAnyObjectByType<QuitWindow>().click();
+            ad.enabled = true;
+            if (ad.isPlaying == false)
+            {
+                panel.SetActive(true);
+                button.SetActive(true);
+                sprite.SetActive(true);
+                FindAnyObjectByType<QuitWindow>().click();
+            } 
         }
         if (script.health > 0)
         {
