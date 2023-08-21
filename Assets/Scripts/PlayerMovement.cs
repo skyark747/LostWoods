@@ -19,12 +19,18 @@ public class PlayerMovement : MonoBehaviour
     float Hmove, Vmove;
     public float speed = 2.5f;
     public string sceneName;
+    public GameObject panel;
+    public GameObject button;
+    public GameObject sprite;
 
     private void FixedUpdate()
     {
         if(killcount>=this.scenechange)
         {
-            SceneManager.LoadScene(sceneName);
+            panel.SetActive(true);
+            button.SetActive(true);
+            sprite.SetActive(true);
+            FindAnyObjectByType<QuitWindow>().click();
         }
         if (script.health > 0)
         {

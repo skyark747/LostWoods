@@ -22,7 +22,7 @@ public class QuitWindow : MonoBehaviour
 
     public void Quit()
     {
-        Application.Quit();
+        SceneManager.LoadScene("MainScreen");
     }
 
     public void Restart()
