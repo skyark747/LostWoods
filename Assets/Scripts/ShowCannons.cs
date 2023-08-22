@@ -18,6 +18,7 @@ public class ShowCannons : MonoBehaviour
     public void CannonEnabled()
     {
         attendcall.SetActive(true);
+        aud.enabled = true;
         aud.Play();
         if (level == 0)
         {

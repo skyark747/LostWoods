@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     public float killcount = 0;
     public float scenechange = 10f;
     public PlayerHealthbar script;
-    public GameObject button;
    
     bool move=false;
     public AudioSource aud;
