@@ -7,7 +7,7 @@ public class HouseUpgrade : MonoBehaviour
 {
     public Image image;
     public GameObject button;
-    //public Animator MyAnim;
+  
     protected bool IsHurt = false;
     protected bool IsDEad = false;
     public float health = 0f;
@@ -17,6 +17,7 @@ public class HouseUpgrade : MonoBehaviour
         if (health >= 1)
         {
             button.SetActive(true);
+      
         }
         else
         {

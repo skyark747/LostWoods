@@ -10,17 +10,17 @@ public class ShowCannons : MonoBehaviour
     public GameObject cannon_1;
     public GameObject cannon_2;
     public GameObject cannon_3;
-    public Button NextLevel;
+    public GameObject attendcall;
 
-    
+
     public void CannonEnabled()
     {
+        attendcall.SetActive(true);
         if (level == 0)
         {
             cannon_1.SetActive(true);
             level++;
             UpgradeImage.fillAmount = 0f;
-            NextLevel.enabled = true;
         }
         else if (level == 1)
         {

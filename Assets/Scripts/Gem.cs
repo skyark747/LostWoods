@@ -9,6 +9,7 @@ public class Gem : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+            FindAnyObjectByType<PlayerMovement>().GemCount++;
         }
     }
 }

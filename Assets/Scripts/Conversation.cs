@@ -56,18 +56,11 @@ public class Conversation : MonoBehaviour
         else
         {
             isactive = false;
-            if (SceneManager.GetActiveScene().buildIndex == 3 && cannon_1.active == true)
-            {
+          
+            
+            
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
-            else if(SceneManager.GetActiveScene().buildIndex < 3)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
-            else if (SceneManager.GetActiveScene().buildIndex == 4 && cannon_2.active == true && cannon_1.active == true && cannon_3.active == true)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
+            
           
             AudioListener.volume = 1;
             Time.timeScale = 1;

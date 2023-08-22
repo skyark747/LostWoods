@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float killcount = 0;
     public float scenechange = 10f;
     public PlayerHealthbar script;
+    public GameObject button;
    
     bool move=false;
     public AudioSource aud;
@@ -21,11 +22,12 @@ public class PlayerMovement : MonoBehaviour
     public string sceneName;
 
 
-    private int GemCount=0;
+    public int GemCount=0;
 
 
     private void FixedUpdate()
     {
+        
         if (script.health > 0)
         {
             movement();
