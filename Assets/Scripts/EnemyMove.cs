@@ -37,6 +37,7 @@ public class EnemyMove : MonoBehaviour
             this.IsDead = true;
             Gem.SetActive(true);
             FindAnyObjectByType<PlayerMovement>().killcount++;
+            GetComponent <CapsuleCollider>().enabled = false;
         }
         else if(collision.gameObject.CompareTag("House") && !IsDead)
         {

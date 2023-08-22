@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HouseUpgrade : MonoBehaviour
 {
     public Image image;
-    public Button button;
+    public GameObject button;
     //public Animator MyAnim;
     protected bool IsHurt = false;
     protected bool IsDEad = false;
@@ -14,13 +14,13 @@ public class HouseUpgrade : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (health >= 1f)
+        if (health >= 1)
         {
-            button.enabled = true;
+            button.SetActive(true);
         }
         else
         {
-            button.enabled = false;
+            button.SetActive(false);
         }
     }
     private void OnCollisionEnter(Collision collision)

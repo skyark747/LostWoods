@@ -10,6 +10,9 @@ public class ShowCannons : MonoBehaviour
     public GameObject cannon_1;
     public GameObject cannon_2;
     public GameObject cannon_3;
+    public Button NextLevel;
+
+    
     public void CannonEnabled()
     {
         if (level == 0)
@@ -17,10 +20,10 @@ public class ShowCannons : MonoBehaviour
             cannon_1.SetActive(true);
             level++;
             UpgradeImage.fillAmount = 0f;
+            NextLevel.enabled = true;
         }
         else if (level == 1)
         {
-            
             cannon_2.SetActive(true);
             level++;
             UpgradeImage.fillAmount = 0f;

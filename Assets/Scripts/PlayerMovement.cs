@@ -19,28 +19,13 @@ public class PlayerMovement : MonoBehaviour
     float Hmove, Vmove;
     public float speed = 2.5f;
     public string sceneName;
-    public GameObject panel;
-    public GameObject button;
-    public GameObject sprite;
-    public AudioSource ad;
+
+
+    private int GemCount=0;
+
 
     private void FixedUpdate()
     {
-       
-
-        if (killcount>=this.scenechange)
-        {
-            ad.enabled = true;
-            if (ad.isPlaying == false)
-            {
-                panel.SetActive(true);
-                button.SetActive(true);
-                sprite.SetActive(true);
-                AudioListener.volume = 0;
-                Time.timeScale = 0;
-            } 
-            
-        }
         if (script.health > 0)
         {
             movement();
