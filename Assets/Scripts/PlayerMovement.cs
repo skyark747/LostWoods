@@ -26,7 +26,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(killcount>=this.scenechange)
+        AudioListener.volume = 1;
+        Time.timeScale = 1;
+        if (killcount>=this.scenechange)
         {
             ad.enabled = true;
             if (ad.isPlaying == false)
@@ -37,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
                 AudioListener.volume = 0;
                 Time.timeScale = 0f;
             } 
+            
         }
         if (script.health > 0)
         {
