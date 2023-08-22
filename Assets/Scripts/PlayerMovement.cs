@@ -26,8 +26,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        AudioListener.volume = 1;
-        Time.timeScale = 1;
         if (killcount>=this.scenechange)
         {
             ad.enabled = true;
@@ -37,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
                 button.SetActive(true);
                 sprite.SetActive(true);
                 AudioListener.volume = 0;
-                Time.timeScale = 0f;
+                Time.timeScale = 0;
             } 
             
         }

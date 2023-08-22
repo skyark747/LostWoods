@@ -13,6 +13,9 @@ public class Conversation : MonoBehaviour
     public RectTransform back;
     public AudioSource audioSource;
     public Image img;
+    public GameObject cannon_1;
+    public GameObject cannon_2;
+    public GameObject cannon_3;
 
     Messages[] c_msg;
     Actor[] c_actor;
@@ -53,7 +56,21 @@ public class Conversation : MonoBehaviour
         else
         {
             isactive = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            if (SceneManager.GetActiveScene().buildIndex == 3 && cannon_1.active == true)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else if(SceneManager.GetActiveScene().buildIndex < 3)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else if (SceneManager.GetActiveScene().buildIndex == 4 && cannon_2.active == true && cannon_1.active == true && cannon_3.active == true)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+          
+            AudioListener.volume = 1;
+            Time.timeScale = 1;
         }
         
     }
