@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+       
+
         if (killcount>=this.scenechange)
         {
             ad.enabled = true;
