@@ -11,11 +11,14 @@ public class ShowCannons : MonoBehaviour
     public GameObject cannon_2;
     public GameObject cannon_3;
     public GameObject attendcall;
+    public AudioSource aud;
+
 
 
     public void CannonEnabled()
     {
         attendcall.SetActive(true);
+        aud.Play();
         if (level == 0)
         {
             cannon_1.SetActive(true);
