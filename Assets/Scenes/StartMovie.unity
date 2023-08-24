@@ -293,8 +293,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0025024, y: -0.0024948}
-  m_SizeDelta: {x: 1024.5, y: 527.51}
+  m_AnchoredPosition: {x: 0.045546, y: -2.4634}
+  m_SizeDelta: {x: 1279.9, y: 715.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348522449
 MonoBehaviour:
@@ -370,8 +370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 403, y: 27}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 506.24707, y: 35.891235}
+  m_SizeDelta: {x: 200.3655, y: 40.445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &376738562
 AudioSource:
@@ -718,10 +718,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -809,8 +809,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0024414, y: -0.0024338}
-  m_SizeDelta: {x: 1024.5, y: 527.23}
+  m_AnchoredPosition: {x: -0.011597, y: 0.00084305}
+  m_SizeDelta: {x: 1321, y: 728.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!328 &1377831569
 VideoPlayer:

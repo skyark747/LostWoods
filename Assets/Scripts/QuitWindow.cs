@@ -29,6 +29,7 @@ public class QuitWindow : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         AudioListener.volume = 1.0f;
+        Time.timeScale = 1f;
     }
 
 }

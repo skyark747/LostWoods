@@ -6838,7 +6838,7 @@ PrefabInstance:
     - target: {fileID: 5826129234918473970, guid: 06df6dd971e205046ae238310e98b116, type: 3}
       propertyPath: cannon_1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2109359792}
     - target: {fileID: 5826129234918473970, guid: 06df6dd971e205046ae238310e98b116, type: 3}
       propertyPath: cannon_2
       value: 
@@ -8029,6 +8029,11 @@ Transform:
   m_Father: {fileID: 1240619256}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2109359792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 534760743353968169, guid: 214554882907ac9479737b2e11ef0987, type: 3}
+  m_PrefabInstance: {fileID: 2681317973083045533}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2140650048 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4344543326355721941, guid: cf36cd6f46318914199cbea3033953cc, type: 3}

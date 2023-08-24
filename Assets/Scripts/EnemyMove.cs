@@ -38,6 +38,7 @@ public class EnemyMove : MonoBehaviour
             Gem.SetActive(true);
             FindAnyObjectByType<PlayerMovement>().killcount++;
             GetComponent <CapsuleCollider>().enabled = false;
+            aud.Stop();
         }
         else if(collision.gameObject.CompareTag("House") && !IsDead)
         {
@@ -45,7 +46,8 @@ public class EnemyMove : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Border") && !IsDead)
         {
-            animator.SetBool("Dead", true);
+            Debug.Log("Collision with border.........");
+            gameObject.SetActive(false);
         }
 
     }

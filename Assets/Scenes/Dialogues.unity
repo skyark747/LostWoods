@@ -355,6 +355,9 @@ MonoBehaviour:
   back: {fileID: 951488459}
   audioSource: {fileID: 951488463}
   img: {fileID: 2018113736}
+  cannon_1: {fileID: 0}
+  cannon_2: {fileID: 0}
+  cannon_3: {fileID: 0}
 --- !u!82 &951488463
 AudioSource:
   m_ObjectHideFlags: 0
@@ -499,10 +502,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -913,8 +916,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34.9047, y: -35.1247}
-  m_SizeDelta: {x: 1329.3594, y: 687.7775}
+  m_AnchoredPosition: {x: -22.0743, y: -35.1247}
+  m_SizeDelta: {x: 1355.0203, y: 687.7775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1797546035
 MonoBehaviour:
@@ -1374,8 +1377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -389, y: -122}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -383.0047, y: -122}
+  m_SizeDelta: {x: 101.9303, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2018113736
 MonoBehaviour:
