@@ -1,31 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class BotMovement : MonoBehaviour
+public class GoliZombie : MonoBehaviour
 {
     public Animator m_Animator;
+    public GameObject AttackSite;
     public AudioSource aud;
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
     public bool isCollided = false;
-    private bool IzzyAlive = true;
+    private bool IsDead = false;
 
     //Attack
-    public float TimeBetweenAttacks=1f;
+    public float TimeBetweenAttacks = 1f;
 
+    private void Update()
+    {
+        if (!IsDead)
+        {
+            transform.LookAt(AttackSite.transform);
+            //Bear.GetComponent<Rigidbody>().velocity = Bear.transform.forward * speed;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if (IzzyAlive)
+        if (!IsDead)
         {
-            if (other.gameObject.CompareTag("Enemy"))
+            if (other.gameObject.CompareTag("House"))
             {
                 isCollided = true;
 
                 transform.LookAt(other.gameObject.transform);
                 Attack();
+
             }
         }
     }
@@ -33,7 +42,16 @@ public class BotMovement : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         isCollided = false;
-        m_Animator.SetBool("IsFiring", false);
+        m_Animator.SetBool("Attack", false);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Bullet"))
+        {
+            m_Animator.SetBool("Dead", true);
+            IsDead = true;
+        }
     }
     private void Attack()
     {
@@ -41,10 +59,12 @@ public class BotMovement : MonoBehaviour
 
         ///Add Attack code
 
-        m_Animator.SetBool("IsFiring", true);
+        m_Animator.SetBool("Attack", true);
         var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
         aud.Play();
         ////
     }
+
+
 }
