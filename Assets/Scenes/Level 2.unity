@@ -4166,6 +4166,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6226910731398805926, guid: d828335026764674780132789c92dbef, type: 3}
+      propertyPath: isFloating
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7458990902824910634, guid: d828335026764674780132789c92dbef, type: 3}
       propertyPath: m_Name
       value: Diamondo5side
@@ -12828,11 +12832,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.27648377
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2565501
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalScale.z
@@ -14606,7 +14610,7 @@ RectTransform:
   m_GameObject: {fileID: 1493059841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.47073027, y: 2.1900074, z: 1}
+  m_LocalScale: {x: 0.57, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1323510621}
