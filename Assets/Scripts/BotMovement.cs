@@ -12,6 +12,7 @@ public class BotMovement : MonoBehaviour
     public float bulletSpeed = 10;
     public bool isCollided = false;
     private bool IzzyAlive = true;
+    private bool AlreadyAttacked = false;
 
     //Attack
     public float TimeBetweenAttacks=1f;
@@ -38,13 +39,24 @@ public class BotMovement : MonoBehaviour
     private void Attack()
     {
         //Make sure Enemy dosen't move
+        if (!AlreadyAttacked)
+        {
+            ///Add Attack code
 
-        ///Add Attack code
+            m_Animator.SetBool("IsFiring", true);
+            var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+            aud.Play();
+            ////
 
-        m_Animator.SetBool("IsFiring", true);
-        var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
-        aud.Play();
-        ////
+            AlreadyAttacked = true;
+            Invoke(nameof(ResetAttack), TimeBetweenAttacks);
+        }
     }
+
+    void ResetAttack()
+    {
+        AlreadyAttacked = false;
+    }
+
 }
