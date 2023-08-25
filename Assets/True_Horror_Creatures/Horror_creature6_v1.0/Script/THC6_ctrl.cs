@@ -119,14 +119,14 @@ public class THC6_ctrl : MonoBehaviour {
 		if (Input.GetKeyDown ("o")) anim.SetInteger ("moving", 14); //die2
 		
 
-		if (controller.isGrounded) 
-		{
-			moveDirection=transform.forward * Input.GetAxis ("Vertical") * speed * runSpeed;
-			float turn = Input.GetAxis("Horizontal");
-			transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);						
-		}
-		moveDirection.y -= gravity * Time.deltaTime;
-		controller.Move (moveDirection * Time.deltaTime);
+		//if (controller.isGrounded) 
+		//{
+		//	moveDirection=transform.forward * Input.GetAxis ("Vertical") * speed * runSpeed;
+		//	float turn = Input.GetAxis("Horizontal");
+		//	transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);						
+		//}
+		//moveDirection.y -= gravity * Time.deltaTime;
+		//controller.Move (moveDirection * Time.deltaTime);
 		}
 }
 

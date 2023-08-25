@@ -848,7 +848,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11432326, guid: 332254905319da1469830bd3e8725b48, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 494698, guid: 332254905319da1469830bd3e8725b48, type: 3}
@@ -1207,6 +1208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e383dbb9835c9334fa0e41bde7227245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!114 &187478147
 MonoBehaviour:
   m_ObjectHideFlags: 0
