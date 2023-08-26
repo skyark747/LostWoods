@@ -18,14 +18,14 @@ public class PlayerMovement : MonoBehaviour
     float Hmove, Vmove;
     public float speed = 2.5f;
     public string sceneName;
-
+  
 
     public int GemCount=0;
 
 
     private void FixedUpdate()
     {
-        
+       
         if (script.health > 0)
         {
             movement();
