@@ -20,7 +20,7 @@ public class EnemyHealth : MonoBehaviour
             FindAnyObjectByType<BossMovement>().IsDead = true;
             FindAnyObjectByType<BossMovement>().Gem.SetActive(true);
             FindAnyObjectByType<PlayerMovement>().killcount++;
-            GetComponent<MeshCollider>().enabled = false;
+            Destroy(GetComponent<Rigidbody>());
             FindAnyObjectByType<BossMovement>().aud.Stop();
         }
     }

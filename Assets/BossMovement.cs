@@ -21,6 +21,10 @@ public class BossMovement : MonoBehaviour
             transform.LookAt(GoalPoint);
             //Bear.GetComponent<Rigidbody>().velocity = Bear.transform.forward * speed;
         }
+        else
+        {
+            GetComponent<MeshCollider>().enabled = false;
+        }
         //if(FindAnyObjectByType<EnemyHealth>().IsHealthZ == true)
         //{
         //    animator.SetBool("Dead", true);

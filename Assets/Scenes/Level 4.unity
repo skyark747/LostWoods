@@ -815,6 +815,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: thc6
       objectReference: {fileID: 0}
+    - target: {fileID: 111292, guid: 332254905319da1469830bd3e8725b48, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 494698, guid: 332254905319da1469830bd3e8725b48, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -940,7 +944,7 @@ MonoBehaviour:
   Gem: {fileID: 481140103}
   Zombie: {fileID: 183278890}
   GoalPoint: {fileID: 196749318}
-  speed: 0.5
+  speed: 1
   aud: {fileID: 643892167}
   IsDead: 0
 --- !u!64 &183278894
