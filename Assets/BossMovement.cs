@@ -11,15 +11,20 @@ public class BossMovement : MonoBehaviour
     public float speed = 2f;
     public AudioSource aud;
     public bool IsDead = false;
-
+    bool IsMoving = true;
     void Update()
     {
         new WaitForSeconds(6);
         if (!IsDead)
         {
-            animator.SetBool("Walk", true);
             transform.LookAt(GoalPoint);
-            //Bear.GetComponent<Rigidbody>().velocity = Bear.transform.forward * speed;
+            if (IsMoving)
+            {
+                animator.SetBool("Walk", true);
+             
+
+                Zombie.GetComponent<Rigidbody>().velocity = Zombie.transform.forward * speed;
+            }
         }
         else
         {
@@ -44,14 +49,15 @@ public class BossMovement : MonoBehaviour
         {
             animator.SetBool("Attack", true);
             aud.Play();
+            IsMoving = false;
         }
         else if (collision.gameObject.CompareTag("House") && !IsDead)
         {
-            animator.SetBool("Attack", true);
+            animator.SetBool("Attack", true); IsMoving = false;
         }
     }
     private void OnCollisionExit(Collision collision)
     {
-        animator.SetBool("Attack", false);
+        animator.SetBool("Attack", false); IsMoving = true;
     }
 }

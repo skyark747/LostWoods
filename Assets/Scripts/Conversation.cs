@@ -16,6 +16,8 @@ public class Conversation : MonoBehaviour
     public GameObject cannon_2;
     public GameObject cannon_3;
 
+
+
     Messages[] c_msg;
     Actor[] c_actor;
 
