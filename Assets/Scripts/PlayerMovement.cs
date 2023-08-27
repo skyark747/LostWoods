@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private FixedJoystick js;
     public float killcount = 0;
+    public bool MainAlive = true;
     public float scenechange = 10f;
     public PlayerHealthbar script;
 
@@ -29,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
         if (script.health > 0)
         {
             movement();
+        }
+        else
+        {
+            MainAlive = false;
         }
     }
     private void movement()

@@ -841,6 +841,7 @@ MonoBehaviour:
   animator: {fileID: 187478140}
   js: {fileID: 2039449540}
   killcount: 0
+  MainAlive: 1
   scenechange: 15
   script: {fileID: 187478143}
   aud: {fileID: 187478144}
@@ -879,6 +880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Himg: {fileID: 763486438}
   MyAnim: {fileID: 187478140}
+  IsDEad: 0
   health: 1
 --- !u!82 &187478144
 AudioSource:
@@ -1277,6 +1279,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6804990658058999119, guid: 65c9f6563c561ee4e8905d1e6a32548b, type: 3}
   bulletSpeed: 10
   isCollided: 0
+  IzzyAlive: 1
   TimeBetweenAttacks: 1
 --- !u!65 &196749323
 BoxCollider:
@@ -1427,6 +1430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Himg: {fileID: 813590174}
   MyAnim: {fileID: 196749321}
+  IsDEad: 0
   health: 1
 --- !u!1001 &198694483
 PrefabInstance:
@@ -1511,7 +1515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8703012626237975948, guid: 92d86d68651462846aedab76514648df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.3
+      value: -100.9
       objectReference: {fileID: 0}
     - target: {fileID: 8703012626237975948, guid: 92d86d68651462846aedab76514648df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15844,7 +15848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -33.2
+      value: -105.8
       objectReference: {fileID: 0}
     - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_LocalPosition.z

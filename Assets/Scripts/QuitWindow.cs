@@ -23,6 +23,8 @@ public class QuitWindow : MonoBehaviour
     public void Quit()
     {
         SceneManager.LoadScene("MainScreen");
+        AudioListener.volume = 1.0f;
+        Time.timeScale = 1f;
     }
 
     public void Restart()

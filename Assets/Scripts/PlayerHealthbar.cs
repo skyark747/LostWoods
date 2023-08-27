@@ -8,7 +8,7 @@ public class PlayerHealthbar : MonoBehaviour
     public Image Himg;
     public Animator MyAnim;
     protected bool IsHurt = false;
-    protected bool IsDEad = false;
+    public bool IsDEad = false;
     public float health=1f;
   
     void FixedUpdate()
@@ -16,7 +16,7 @@ public class PlayerHealthbar : MonoBehaviour
         
         if (IsHurt)
         {
-            health -= .005f;
+            health -= .05f;
         }
         Himg.fillAmount = health;
         if(health<=0f)

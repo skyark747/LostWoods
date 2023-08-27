@@ -11,12 +11,21 @@ public class BotMovement : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
     public bool isCollided = false;
-    private bool IzzyAlive = true;
+    public bool IzzyAlive = true;
     private bool AlreadyAttacked = false;
 
     //Attack
     public float TimeBetweenAttacks=1f;
 
+
+    private void Update()
+    {
+        if(FindAnyObjectByType<PlayerHealthbar>().IsDEad)
+        {
+            IzzyAlive = false;
+            FindAnyObjectByType<PlayerHealthbar>().IsDEad = false;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (IzzyAlive)
